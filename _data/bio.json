@@ -11,7 +11,7 @@
     "profiles": [
       { "network": "github", "username": "Josh Li", "url": "http://github.com/kaamava" },
       { "network": "linkedin", "username": "Josh Li", "url": "http://linkedin.com/in/changeme" },
-      { "network": "twitter", "username": "kama", "url": "https://twitter.com/kamaKun0312" 
+      { "network": "twitter", "username": "kama", "url": "https://twitter.com/kamaKun0312" }
     ]
   },
   "interests": [
