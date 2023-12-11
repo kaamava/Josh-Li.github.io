@@ -1,26 +1,25 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
+    "name": "Josh Li",
     "label": "Student",
-    "picture": "https://github.com/kambergjohnson.png",
-    "email": "molly@hawaii.edu",
-    "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
-    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "picture": "https://github.com/kaamava.png",
+    "email": "liyanshu0423@163.com",
+    "phone": "(+86)15351898116",
+    "website": "https://kaamava.github.io",
+    "summary": "I am an undergraduate student majoring in Artificial Intelligence at the School of Computer Science and Technology, Soochow University. I am expected to graduate in 2024. I aim to explore more knowledge in the field of Artificial Intelligence and Computer Engineering in the future to achieve my career goals. I hope to use my abilities to contribute to making the world a better place.",
+    "location": { "address": "Soochow University", "postalCode": "215031", "city": "Soochow", "countryCode": "China", "region": "Jiangsu" },
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" },
-      { "network": "twitter", "username": "mollymal", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "molly", "url": "http://instagram.com/changeme" }
+      { "network": "github", "username": "Josh Li", "url": "http://github.com/kaamava" },
+      { "network": "linkedin", "username": "Josh Li", "url": "http://linkedin.com/in/changeme" },
+      { "network": "twitter", "username": "kama", "url": "https://twitter.com/kamaKun0312" 
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
-    { "name": "Robotics" },
-    { "name": "3D Graphics" }
+    { "name": "Natrual Language Processing" },
+    { "name": "Computer Vision" },
+    { "name": "Machine Learning" },
+    { "name": "Embedded Systems" },
+    { "name": "AI-Hardware Co-designing" }
   ],
   "skills": [
     {
