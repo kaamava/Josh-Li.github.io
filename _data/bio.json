@@ -39,7 +39,7 @@
       "studyType": "B.S.",
       "startDate": "2020-09-01",
       "endDate": "Present",
-      "courses": [Principle of Neural Network, Machine Learning, Python Programming, AI ALgorithm Design & Analysis, Machine Vision, Data Structure, Natrual Language Processing
+      "courses": ["Principle of Neural Network, Machine Learning, Python Programming, AI ALgorithm Design & Analysis, Machine Vision, Data Structure, Natrual Language Processing"
       ]
     }
   ],
@@ -89,7 +89,7 @@
       "endDate": "2022-01",
       "summary": "",
       "highlights": [
-        "Served as technical support, responsible for the management of the file submission system, database maintenance, and development of the front-end platform
+        "Served as technical support, responsible for the management of the file submission system, database maintenance, and development of the front-end platform"
       ]
     }
   ],
