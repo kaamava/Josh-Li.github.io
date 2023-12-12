@@ -2,13 +2,14 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "Cotton"
-date: 2014
+title: "Kaggle-LLM"
+date: 2023-10
 published: true
 labels:
-  - Lisp
+  - Competition
+  - LLM
   - GitHub
-summary: "A text adventure game that I developed for ICS 313."
+summary: "A competition of Kaggle that explore the potential of LLMs."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
