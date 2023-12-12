@@ -19,99 +19,101 @@
     { "name": "Computer Vision" },
     { "name": "Machine Learning" },
     { "name": "Embedded Systems" },
-    { "name": "AI-Hardware Co-designing" }
+    { "name": "AI-Hardware Co-designing" },
+    { "name": "Large Language Model" }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Common Lisp" ]
+      "keywords": [ "C", "C++", "C#", "Java", "Javascript", "Python", "Pytorch", "Tensorflow", "Verilog" ]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
-    }
+      "name": "Data Science",
+      "keywords": [ "MATLAB", "SQL", "R"]
+    }  
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
+      "institution": "Soochow University, Jiangsu, China",
+      "area": "Artificial Intelligence (expected Summer, 2024)",
       "studyType": "B.S.",
-      "startDate": "2013-09-01",
+      "startDate": "2020-09-01",
       "endDate": "Present",
-      "courses": [
+      "courses": [Principle of Neural Network, Machine Learning, Python Programming, AI ALgorithm Design & Analysis, Machine Vision, Data Structure, Natrual Language Processing
       ]
     }
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
+      "company": "iFLYTEK CO.,Ltd.",
+      "position": "Intern AI Product Development Assistant",
       "website": "",
-      "startDate": "2015-08-01",
+      "startDate": "2023-11",
       "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "summary": "Provide AI products solutions",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "Provide software-level algorithm updates based on basic needs",
+        "Study the practical application scenarios of corresponding products at the hardware level"
       ]
     },
     {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
+      "company": "Nanjing Rongfei Technology Co.,Ltd.",
+      "position": "Intern AI Testing&Development Engineer",
+      "website": "",
+      "startDate": "2023-07",
+      "endDate": "2023-09",
       "summary": "",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
+        "Participate in the development and testing of facial recognition algorithms and hardware applications for security"
       ]
     }
   ],
   "volunteer": [
     {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
+      "organization": "Animal Protection Practice Group of Soochow University",
+      "website": "",
+      "position": "Technical consultant",
+      "startDate": "2021-07",
+      "endDate": "2022-09",
+      "summary": "Lead developer for website",
       "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
+        "Carried out information crawling and front-end design",
+        "Built an integrated information resource platform"
       ]
     },
     {
-      "organization": "",
+      "organization": "Student Union Secretariat of Soochow University",
       "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
+      "position": "Technical consultant",
+      "startDate": "2020-09",
+      "endDate": "2022-01",
       "summary": "",
       "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "Served as technical support, responsible for the management of the file submission system, database maintenance, and development of the front-end platform
       ]
     }
   ],
   "awards": [
     {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
+      "title": "Silver Medal of Google-Fast or Slow?Predict AI Model Running(4%)",
+      "date": "2023-11"
     },
     {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
+      "title": "Bronze Medal of Kaggle-LLM Science Exam(7%)",
+      "date": "2023-10"
+    }
+    {
+      "title": "Successful Participant of ByteDance Youth Camp",
+      "date": "2023-08"
+    }
+    {
+      "title": "Provincial Second Prize of China Undergraduate Mathematical Contest in Modeling(10%)",
+      "date": "2022-09"
     }
   ],
   "references": [
     {
-      "name": "Available upon request"
+  
     }
   ]
 }
