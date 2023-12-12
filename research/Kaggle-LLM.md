@@ -1,6 +1,6 @@
 ---
-layout: project
-type: project
+layout: research
+type: research
 image: img/cotton/cotton-square.png
 title: "Kaggle-LLM Science Exam"
 date: 2023-10
