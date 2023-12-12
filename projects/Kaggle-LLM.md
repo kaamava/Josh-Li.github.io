@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/Kaggle-LLM/first.png
 title: "Kaggle-LLM"
 date: 2023-10
 published: true
