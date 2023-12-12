@@ -9,7 +9,7 @@ labels:
   - Competition
   - LLM
   - GitHub
-summary: "A competition of Kaggle that explore the potential of LLMs."
+summary: "A competition of Kaggle that explore the potential of LLMs. We encoded the input using DeBERTa-v3-large and built a reading comprehension model using the AutoModelForMultipleChoice model from the Transformers library. Our work will help researchers better understand the ability of LLMs to test themselves. I received a Bronze medal(7%) for this competition."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
