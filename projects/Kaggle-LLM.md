@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/Kaggle-LLM/first.PNG
+image: img/Kaggle-LLM/second.jpg
 title: "Kaggle-LLM"
 date: 2023-10
 published: true
