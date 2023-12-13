@@ -6,6 +6,7 @@ title: "Monocular Depth Estimation on Ascend Development Board"
 date: 2022/09-2023/01
 published: true
 labels:
+  - Project
   - CV
   - Hardware
   - GitHub
