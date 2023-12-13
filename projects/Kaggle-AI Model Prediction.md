@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/cotton/cotton-square.png
 title: "Kaggle-AI Model Prediction"
-date: 2023-11
+date: 2023/11
 published: true
 labels:
   - Competition
