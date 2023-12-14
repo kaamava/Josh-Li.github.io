@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/bert.jpg
 title: "LDA-BERT for Aspect Level Sentimental Analysis"
 date: 2022/09-2023/01
 published: true
