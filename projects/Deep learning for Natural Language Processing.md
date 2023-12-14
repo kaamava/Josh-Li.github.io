@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/Weibo.png
 title: "Deep Learning for NLP and Data Science"
 date: 2022/07-2022/09
 published: true
