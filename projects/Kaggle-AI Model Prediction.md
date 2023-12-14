@@ -9,10 +9,7 @@ labels:
   - Competition
   - AI Algorithm
   - GitHub
-summary: "A competition that explores optimization objectives and methods for AI algorithms. we chose to use a Graph Convolutional Network (GCN) model to address this challenge. Initially, we perform embedding encoding on the operation codes (node_opcode) and node configuration features (node_config_feat) to capture the latent representations of these discrete attributes. These encodings, combined with other node features (node_feat), serve as inputs to the nodes in the GCN model. In terms of model architecture, we use GCN convolution layers (GCNConv) to process the graph structure, facilitating the flow and integration of information between nodes. For the training objective of the model, we utilize the ListMLE loss function, a common choice in list-wise learning, suitable for addressing sorting or priority-related problems. Finally, we opt to train the model using the Adam optimizer.
-
-3.The performance of a single model is often limited by its structure and parameters. To further enhance the accuracy of predictions, we decided to employ model fusion on the aforementioned model. Specifically, we combined the prediction results of multiple models through weighted fusion, then sorted and output these results. This strategy effectively reduces the model's bias and enhances its robustness.
-"
+summary: "A competition that explores optimization objectives and methods for AI algorithms. In this competition, our aim was to train a machine learning model based on the runtime data provided to you in the training dataset and further predict the runtime of graphs and configurations in the test dataset. We used a Graph Convolutional Network (GCN) model to address this challenge. We also useadopted GCN convolution layers (GCNConv) to process the graph structure, facilitating the flow and integration of information between nodes. To further enhance the accuracy of predictions, we decided to employ model fusion on the aforementioned model. Our work will help researchers better understand the ability of LLMs to test themselves. Our work achieved prediction and optimization of the operation of artificial intelligence models and algorithms. I received a Silver medal(4%) for this competition.
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
