@@ -2,11 +2,14 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "Cotton"
-date: 2014
+title: "Deep Learning for NLP and Data Science"
+date: 2022/07-2022/09
 published: true
 labels:
-  - Lisp
+  - Research
+  - NLP
+  - Data Science
+  - Deep Learning
   - GitHub
 summary: "A text adventure game that I developed for ICS 313."
 ---
