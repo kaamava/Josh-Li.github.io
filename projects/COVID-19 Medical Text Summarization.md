@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/BE.jpg
 title: "COVID-19 Related Medical Text Summarization with BERT"
 date: 2022/12-2023/01
 published: true
