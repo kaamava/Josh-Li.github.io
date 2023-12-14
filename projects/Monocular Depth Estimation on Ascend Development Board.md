@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/Atlas.PNG
 title: "Monocular Depth Estimation on Ascend Development Board"
 date: 2022/09-2023/01
 published: true
