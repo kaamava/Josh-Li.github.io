@@ -10,7 +10,7 @@ labels:
   - CV
   - Hardware
   - GitHub
-summary: "A text adventure game that I developed for ICS 313."
+summary: "> Led the team to carry out a monocular visual depth estimation project on the Atlas 200DK development board to realize the hardware implementation of computer vision. > Used ResNet as a model enhancement method to build a deep learning network to achieve monocular visual depth estimation, and converted the model into the development board, which was accepted by the development board provider (Huawei)."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
