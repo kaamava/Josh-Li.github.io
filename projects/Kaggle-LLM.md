@@ -9,7 +9,7 @@ labels:
   - Competition
   - LLM
   - GitHub
-summary: "A competition of Kaggle that explore the potential of LLMs. We encoded the input using DeBERTa-v3-large and built a reading comprehension model using the AutoModelForMultipleChoice model from the Transformers library. Our work will help researchers better understand the ability of LLMs to test themselves. I received a Bronze medal(7%) for this competition."
+summary: "A competition of Kaggle that explore the potential of LLMs. We encoded the input using DeBERTa-v3-large and built a reading comprehension model using the AutoModelForMultipleChoice model from the Transformers library. When our model answers multiple-choice questions automatically, we first match the prompt and options with the original text and then use the model to predict the correct answer. We adopted a sentence vector approach by measuring the similarity between the prompt and the original Wikipedia texts to extract the most similar original text, which serves as the primary reference for the questions. Our model achieved a MAP@3 of 0.906 on the test set. Our work will effecively help researchers better understand the ability of LLMs to test themselves. I received a Bronze medal(7%) for this competition."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
