@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/cocogpt.jpg
 title: "COVID-19 ConsultantGPT Based on BERT-GPT"
 date: 2022/11-2023/02
 published: true
