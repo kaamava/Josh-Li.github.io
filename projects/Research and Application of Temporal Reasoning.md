@@ -2,11 +2,15 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "Cotton"
-date: 2014
+title: "Research and Application of Temporal Reasoning"
+date: 2022/11-2023/10
 published: true
 labels:
-  - Lisp
+  - Research
+  - NLP
+  - Pre-trained language model
+  - Video-language model
+  - Multimode
   - GitHub
 summary: "A text adventure game that I developed for ICS 313."
 ---
