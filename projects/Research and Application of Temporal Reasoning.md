@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/TIME.PNG
 title: "Research and Application of Temporal Reasoning"
 date: 2022/11-2023/10
 published: true
