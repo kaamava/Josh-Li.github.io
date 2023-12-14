@@ -11,7 +11,7 @@ labels:
   - BERT
   - NLP
   - GitHub
-summary: "A text adventure game that I developed for ICS 313."
+summary: "> Collected, annotated, used and improved a Chinese medical dialogue data set CovidDialog-Chinese, and used this data set to train a model based on BERT-GPT. > Utilized frameworks such as PyTorch and TensorFlow and two pre-trained language models, BERT and GPT. > Implemented a model that can have real-time conversations with patients, determine the patient's probability of being infected with COVID-19 based on the patient's specific symptoms and past behavior, and provide targeted medical advice."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
