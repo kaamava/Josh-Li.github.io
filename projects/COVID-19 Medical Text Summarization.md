@@ -10,7 +10,7 @@ labels:
   - NLP
   - BERT
   - GitHub
-summary: "A project."
+summary: "> Developed a Chinese text encoding method based on BiLSTM and embedded it into the encoding layer. > Constructed innovatively an encoder comprising four components: a fine-tuned BERT-Embedding layer, a BiLSTM layer, a series of convolutional gates, and a self-attention mechanism layer. > Collected corpora independently from various medical-related Chinese publications and pre-trained the preprocessed data using BERT to enhance semantic representations in sentences. > Achieved automatic summarization for medical texts, significantly reducing the time cost of reading and material collection."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
