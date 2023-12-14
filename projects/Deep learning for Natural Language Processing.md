@@ -11,7 +11,7 @@ labels:
   - Data Science
   - Deep Learning
   - GitHub
-summary: "A text adventure game that I developed for ICS 313."
+summary: "> Processed and labeled the acquired data, and applied machine learning and natural language processing technologies to conduct data analysis, obtaining results of practical significance for solving social problems and making effective suggestions. > Collected online public opinion data on COVID-19 on the Sina Weibo platform in the first half of 2022, processed and annotated the data according to the requirements of the BERT model, and fine-tuned the BERT model using the data. > Completed the task of public opinion analysis effectively through adding new modules to the model to improve accuracy."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
