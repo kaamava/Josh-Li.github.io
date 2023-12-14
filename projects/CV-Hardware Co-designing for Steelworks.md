@@ -12,7 +12,7 @@ labels:
   - FPGA
   - Industrial application
   - GitHub
-summary: "A text adventure game that I developed for ICS 313."
+summary: "> Ported YOLOv5 model to FPGA using HLS Compiler and optimized the algorithms for hardware deployment scenarios. > Leveraged FPGA programmability to explore customized design for YOLOv5 in industrial settings. > Utilized a large dataset of images and videos from actual production to annotate the components of clay gun machines and trained the object detection model with YOLOv5. > Annotated feature sub-blocks on moving block images and fixed block images respectively, and trained the segmentation model for feature sub-blocks with YOLOv5."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
