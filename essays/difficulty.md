@@ -1,23 +1,21 @@
 ---
 layout: essay
 type: essay
-title: "The difficult things will always be difficult"
+title: "[CONF-SPML 2023] BERT for Sentiment Analysis in the Era of Epidemic"
 # All dates must be YYYY-MM-DD format!
-date: 2016-02-06
+date: 2022-09-30
 published: true
 labels:
-  - Engineering
+  - Paper
+  - NLP
+  - Data Science
+  - Deep Learning
 ---
 
 <img width="200px" class="rounded float-start pe-4" src="../img/difficulty/degree_difficulty.jpg">
 
-*Difficulty: a thing that is hard to accomplish, deal with, or understand.*
-
-One of my friends asked the question earlier last week -- why is it so hard to be an officer for the student branch? Why is so hard compared to working at my on-campus job? This question came after he struggled a little with bookkeeping for the student organization.
-
-Now I gave him the standard answer - being an officer of an organization requires that you manage your time between school and work. There isn't anyone telling you what to do. It's the answer any good mentor would give, and is mostly true.
-
-But the more I though about it, the more I wondered to myself...damn that's a really great question; it's one that deserves some more thought. Most people I think stop at the answer I gave previously - he obviously isn't managing his time properly.
+With the continuous progress of Internet technology, the network platform has gradually entered everyone's life, providing a platform for ordinary people to express their ideas. Since the occurrence of COVID-19, monitoring and analyzing public opinion on the Internet platform has become more practical. Through timely monitoring and analysis, it is of great practical significance for the relevant departments to analyze and control sentiment information and stabilize and guide public sentiment. Therefore, it is essential and of practical significance to select a suitable model for classifying and analyzing public opinion on the Internet platform. This paper reviews the development of word vector technology from the perspective of technology development and then lead to the more advanced Bidirectional Encoder Representations from Transformers (BERT) model with great significance. On this basis, this paper fine-tunes the pre-trained Bert model. It applies the transfer learning strategy to analyzing the public sentiment of the occurrence of COVID-19 during the recent epidemic in Shanghai based on Sina Weibo data. In addition, tests are conducted to compare the model with the previous models. The experimental results show that the Bert model has significant advantages 
+over the traditional model in character vector encoding and feature extraction. But the more I though about it, the more I wondered to myself...damn that's a really great question; it's one that deserves some more thought. Most people I think stop at the answer I gave previously - he obviously isn't managing his time properly.
 
 Here's what I think: the difficult things will always be difficult.
 
