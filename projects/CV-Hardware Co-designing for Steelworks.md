@@ -2,11 +2,15 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "Cotton"
-date: 2014
+title: "CV-Hardware Co-designing for Steelworks"
+date: 2023/09-Present
 published: true
 labels:
-  - Lisp
+  - Research
+  - CV
+  - Hardware
+  - FPGA
+  - Industrial application
   - GitHub
 summary: "A text adventure game that I developed for ICS 313."
 ---
