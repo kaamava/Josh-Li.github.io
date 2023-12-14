@@ -11,7 +11,10 @@ labels:
   - LDA
   - NLP
   - GitHub
-summary: "A text adventure game that I developed for ICS 313."
+summary: "> Introduced a guided LDA model that leverages a small set of general seed words from each aspect category, integrating it with an automatic seed set expansion module based on BERT similarity for improved and quicker topic convergence.
+> Utilized specially-designed RE-based language rules to help better target the multi-word aspect.
+> Filtered the inputs guiding the LDA model using multiple pruning strategies to enhance semantic strength when co-occurrence statistics may not be used as a differentiating factor.
+>Applied particle swarm optimization strategy to adjust the threshold parameters of seed set expansion and RE-based input filter. "
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
