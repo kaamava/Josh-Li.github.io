@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/model.png
 title: "Kaggle-AI Model Prediction"
 date: 2023/11
 published: true
