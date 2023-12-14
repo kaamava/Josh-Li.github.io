@@ -2,11 +2,14 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "Cotton"
-date: 2014
+title: "LDA-BERT for Aspect Level Sentimental Analysis"
+date: 2022/09-2023/01
 published: true
 labels:
-  - Lisp
+  - Research
+  - BERT
+  - LDA
+  - NLP
   - GitHub
 summary: "A text adventure game that I developed for ICS 313."
 ---
