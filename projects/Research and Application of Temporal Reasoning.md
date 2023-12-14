@@ -12,7 +12,7 @@ labels:
   - Video-language model
   - Multimode
   - GitHub
-summary: > Studied the temporal misalignment of PLMs empirically at the lexical level, revealing that the tokens/words with salient lexical semantic change contribute much more to the misalignment problem than other tokens/words. > Proposed a temporal reasoning video-language pre-training framework with both video and language understanding and generation capabilities. > Introduced temporal reasoning pre-training tasks to generate temporal reasoning multi-modal representation through modeling fine-grained temporal moment information and capturing the temporal contextual relations between moment and event."
+summary: "> Studied the temporal misalignment of PLMs empirically at the lexical level, revealing that the tokens/words with salient lexical semantic change contribute much more to the misalignment problem than other tokens/words. > Proposed a temporal reasoning video-language pre-training framework with both video and language understanding and generation capabilities. > Introduced temporal reasoning pre-training tasks to generate temporal reasoning multi-modal representation through modeling fine-grained temporal moment information and capturing the temporal contextual relations between moment and event."
 ---
 
 <img class="img-fluid" src="../img/cotton/cotton-header.png">
