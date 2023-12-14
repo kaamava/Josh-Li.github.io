@@ -2,11 +2,14 @@
 layout: project
 type: project
 image: img/cotton/cotton-square.png
-title: "Cotton"
-date: 2014
+title: "COVID-19 ConsultantGPT Based on BERT-GPT"
+date: 2022/11-2023/02
 published: true
 labels:
-  - Lisp
+  - Research
+  - GPT
+  - BERT
+  - NLP
   - GitHub
 summary: "A text adventure game that I developed for ICS 313."
 ---
