@@ -63,4 +63,4 @@ Although not as computationally robust as some machine learning models, LDA prov
 
 <hr>
 
-Source: <a href="https://github.com/kaamava/LDA-BERT-SA"><i class="large github icon "></i>LDA-BERT for Aspect Level Sentimental Analysis</a>
+Github: <a href="https://github.com/kaamava/LDA-BERT-SA"><i class="large github icon "></i>LDA-BERT for Aspect Level Sentimental Analysis</a>
