@@ -20,49 +20,47 @@ summary: "> Introduced a guided LDA model that leverages a small set of general 
  > Applied particle swarm optimization strategy to adjust the threshold parameters of seed set expansion and RE-based input filter. "
 ---
 
-<img class="img-fluid" src="../img/cotton/cotton-header.png">
+## LDA-BERT-ABSA
+This repository contains part of the code and pre-trained models for our paper "A LDA Model Augmented with BERT for Aspect Level Sentiment Analysis", which has been submitted to ICJAI2024. The complete code will be released right after the conference announces the acceptance results.
 
-Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+## Contents
+- Abstract
+- Overview
+- Model
+- Train
+- Results
 
-To give you a flavor of the game, here is an excerpt from one run:
+## Abstract
+Aspect level sentiment analysis is a fine-grained task in affective analysis. It extracts aspects and their corresponding emotional polarities from opinionated texts. The first sub task of identifying the aspects with comments is called aspect extraction, which is the focus of the work. Social media platform is a huge untagged data resource. However, data annotation for fine-grained tasks is very expensive and laborious. Therefore, the unsupervised model is highly appreciated. The proposed model is an unsupervised aspect extraction method, a guided potential Dirichlet assignment (LDA) model, which uses the smallest aspect seed words from each aspect category to guide the model to identify hidden topics of interest to users. The LDA model is enhanced by using regular expressions that guide input based on language rules. The model is further enhanced through a variety of filtering strategies, including a BERT-based semantic filter, which integrates semantics to strengthen the situation where co-occurrence statistics may not be able to be used as a distinguishing factor. The threshold values of these semantic filters are estimated using Particle Swarm Optimization strategy. The proposed models are expected to overcome the shortcomings of the basic LDA models, which cannot distinguish overlapping topics representing each aspect category.
 
-<hr>
+## Overview
+·Proposed a guided LDA model, which uses only a few general seed words from each aspect category, and combines with the automatic seed set expansion module based on BERT similarity to achieve better and faster topic convergence. The supervision required by the model is the minimum seed aspect terms from each aspect category, which can be learned from the general knowledge of the
+domain.
 
-<pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
+·Proposed specially designed regular expression (RE) based language rules, which helps to better target the multi word aspect. The inputs guiding the LDA model are filtered using multiple pruning strategies, mainly including BERT based semantic filters, so as to combine semantic strength when co-occurrence statistics may not be used as a differentiating factor.
 
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
+·Proposed particle swarm optimization (PSO) strategy which is used to adjust the threshold parameters of seed set expansion and RE-based input filter.
+![image](https://github.com/kaamava/LDA-BERT-ABSA/assets/106901273/98e7b9ad-d455-41b8-b42d-17b45d2c2f52)
 
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
+## Model
+### • BERT
 
-pickup candle
-- you are now carrying the candle -
+[Bidirectional Encoder Representations from Transformers](https://github.com/google-research/bert) derives representations of words based on nlp models ran over open-source Wikipedia data. These representations are then leveraged to derive corpus topics.
 
-pickup match
-- you are now carrying the match -
 
-light match candle
+<a id="lda"></a>
 
-The candle is now lit. It illuminates everything in the room.
+### • LDA 
+[Latent Dirichlet Allocation](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) is a generative statistical model that allows sets of observations to be explained by unobserved groups that explain why some parts of the data are similar. In the case of kwx, documents or text entries are posited to be a mixture of a given number of topics, and the presence of each word in a text body comes from its relation to these derived topics.
 
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
-</pre>
+Although not as computationally robust as some machine learning models, LDA provides quick results that are suitable for many applications. Specifically for keyword extraction, in most settings the results are similar to those of BERT in a fraction of the time.
+
+### • PSO
+<a target="_blank" href="https://en.wikipedia.org/wiki/Particle_swarm_optimization">Particle swarm optimization</a> (PSO) can be used to find optimal values for the parameters by using a randomly chosen aspect level labeled dataset.
+## Train
+## Results
+*These two parts will be released after the conference announces the acceptance results.*
 
 <hr>
 
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
+Source: <a href="https://github.com/kaamava/LDA-BERT-SA"><i class="large github icon "></i>LDA-BERT for Aspect Level Sentimental Analysis</a>
