@@ -14,49 +14,51 @@ labels:
 summary: "> Collected, annotated, used and improved a Chinese medical dialogue data set CovidDialog-Chinese, and used this data set to train a model based on BERT-GPT. > Utilized frameworks such as PyTorch and TensorFlow and two pre-trained language models, BERT and GPT. > Implemented a model that can have real-time conversations with patients, determine the patient's probability of being infected with COVID-19 based on the patient's specific symptoms and past behavior, and provide targeted medical advice."
 ---
 
-<img class="img-fluid" src="../img/cotton/cotton-header.png">
+# CoCoGPT
 
-Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+## Introduction
 
-To give you a flavor of the game, here is an excerpt from one run:
+Today, with the increasing risk of COVID-19 infection in the society, people who are suspected of COVID-19's symptoms or have a greater risk of infection for various reasons will have some anxiety about medical consultation. Relatively, the pressure on the medical system will rapidly increase in the short term. Opening up an online medical consultation platform can to some extent alleviate the current social pressure and public anxiety. However, at the same time, the professionalism of online consultation needs to be guaranteed. Therefore, the purpose of this study is to establish a medical dialogue model CoCoGPT (COVID-19 Consultant GPT) that can provide COVID-19 related consultations using professional medical consultation materials. The report utilizes and improves a Chinese medical dialogue dataset COVID-Dialogue-Chinese, which includes dialogue records between doctors and patients regarding COVID-19. In this study, the dataset were used to train a BERT-GPT based model.
 
+## Dataset
+COVID-Dialogue-Chinese is a Chinese medical dialogue dataset about COVID-19 and other types of pneumonia. Patients who are concerned that they may be infected by COVID-19 or other pneumonia consult doctors and doctors provide advice. There are 1088 consultations. Each consultation consists of
+
+- ID
+- URL
+- Description of patient’s medical condition
+- Dialogue
+- (Optional) Diagnosis and suggestions.
+
+The dataset is built from [Haodf.com](https://www.haodf.com/) and all copyrights of the data belong to [Haodf.com](https://www.haodf.com/).
+
+## Model
+
+### 1.Transformer
+
+Transformer is an encoder-decoder architecture for sequence-to-sequence (seq2seq) modeling. Transformer is composed of a stack of building blocks, each consisting of a self-attention layer and a position-wise feed-forward layer. Residual connection is applied around each of the two sub-layers, followed by layer normalization.
+
+### 2.GPT
+The GPT model is a language model (LM) based on Transformer. Different from Transformer which defines a conditional probability on an output sequence given an input sequence, GPT defines a marginal probability on a single sequence. GPT-2 is an extension of GPT, which modifies GPT by moving layer normalization to the input of each sub-block and adding an additional layer normalization after the final self-attention block.
+
+DialoGPT (Zhang et al., 2019) is a GPT-2 model pretrained on English Reddit dialogues. The dataset is extracted from comment chains in Reddit from 2005 till 2017, comprising 147,116,725 dialogue instances with 1.8 billion tokens.
+
+### 3.BERT-GPT
+
+BERT-GPT (Wu et al., 2019) is a model used for dialogue generation where pretrained BERT is used to encode the conversation history and GPT is used to generate the responses. While GPT focuses on learning a Transformer decoder for text generation purposes, BERT aims to learn a Transformer encoder for representing texts.
+
+In BERT-GPT, the pretraining of the BERT encoder and the GPT decoder is conducted separately, which may lead to inferior performance.
+
+BERT-GPT-Chinese is a BERT-GPT model pretrained on Chinese corpus. For the BERT encoder in BERT-GPT-Chinese, it is set to the Chinese BERT, which is a large-scalepretrained BERT model on Chinese texts. 
+
+The detailed introduction of the model in this research is contained in CoCoGPT.pdf.
+
+## Result
+
+Human evaluation and automatic evaluation results show that these models are promising in generating clinically meaningful and linguistically high-quality consultations for COVID-19 in Chinese.The detailed performance of the model is contained in CoCoGPT.pdf.
+
+The generated examples：
+
+![image](https://github.com/kaamava/CoCoGPT/assets/106901273/53005c59-b492-4d65-9508-91e785412e26)
 <hr>
 
-<pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
-
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
-
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
-
-pickup candle
-- you are now carrying the candle -
-
-pickup match
-- you are now carrying the match -
-
-light match candle
-
-The candle is now lit. It illuminates everything in the room.
-
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
-</pre>
-
-<hr>
-
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
+Source: <a href="https://github.com/kaamava/CoCoGPT"><i class="large github icon "></i>CoCoGPT</a>
