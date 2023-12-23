@@ -13,49 +13,49 @@ labels:
 summary: "> Led the team to carry out a monocular visual depth estimation project on the Atlas 200DK development board to realize the hardware implementation of computer vision. > Used ResNet as a model enhancement method to build a deep learning network to achieve monocular visual depth estimation, and converted the model into the development board, which was accepted by the development board provider (Huawei)."
 ---
 
-<img class="img-fluid" src="../img/cotton/cotton-header.png">
+# Mono-depth-Estimation-on-Develop-Board
 
-Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+The Atlas 200 DK Developer Kit (Model: 3000) is a high-performance AI application development board integrated with Ascend processors. It facilitates users in rapid development and validation, making it versatile for applications such as developer solution verification, higher education, and scientific research.
 
-To give you a flavor of the game, here is an excerpt from one run:
+![image](https://github.com/kaamava/Mono-depth-Estimation-on-Develop-Board/assets/106901273/dbcaddc0-a9c6-416c-8bbc-becfe4eb951b)
 
+To operationalize the monocular vision depth estimation project, we deployed it on the Atlas 200DK development board. Through the Atlas 200 DK development board, we conducted depth estimation inference experiments by utilizing local image data as input. The aim was to estimate the depth of the environment in the images and save the resulting detection images to files.
+
+We constructed a model based on U-net with ResNet as the encoder. To adapt it to the hardware, we made some adjustments. To address redundancy issues, we reduced the number of convolutional kernels and applied a divide-and-conquer approach to them. Additionally, to resolve operator incompatibility, we independently created corresponding operators.
+> This project implements the U-Net Convolutional Neural Network with a ResNet encoder (pre-trained on imagenet weights) on the NYU-Depth v2 dataset and achieved a soft accuracy of 83% on the test set.
+
+![image](https://github.com/kaamava/Mono-depth-Estimation-on-Develop-Board/assets/106901273/33f39141-21e7-47ca-8ffa-5432fefa03a2)
+
+## Tech used
+- TensorFlow 2.0.0
+- Python 3.5.6
+
+## Instructions to run
+- Using `anaconda`:
+  - Run `conda create --name <env_name> --file recog.yml`
+  - Run `conda activate <env_name>`
+- Using `pip`:
+  - Run `pip install -r requirements.txt`
+- `cd` to `src`
+- Run `python main.py`
+
+## Model
+
+The model used in this experiment is based on U-Net, constructing a deep learning network for monocular visual depth estimation. It incorporates ideas from DenseNet and ResNet, enhancing the model with dilated convolutional neural networks and residual learning modules. Furthermore, adjustments were made to the model in accordance with the deployment requirements on the Atlas 200DK.
+
+
+The model we trained is in PyTorch, and PyTorch is not compatible with inference on the Atlas 200DK. To meet the deployment requirements on the development board, we chose the model conversion route: PyTorch → ONNX → Caffe → OM. This pathway minimizes the losses introduced during model conversion, aligns well with the design requirements of the development board, and is better suited to the hardware environment.
+
+The multi-step transformation of computer vision models is crucial for realizing hardware applications.
+
+**The details of the model introduction and conversion are presented in the Monocular-Board.pdf.**
+
+## Output
+We can perform real-time monocular visual depth detection using the Atlas 200DK development board. This project has been officially approved by Huawei.
+
+![output](https://github.com/kaamava/Mono-depth-Estimation-on-Develop-Board/assets/106901273/8c694b6d-8317-494a-bdfa-05997e062e01)
+
+![image](https://github.com/kaamava/Mono-depth-Estimation-on-Develop-Board/assets/106901273/bebe6fb4-0edd-4def-a438-0aa94a2a6c9f)
 <hr>
 
-<pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
-
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
-
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
-
-pickup candle
-- you are now carrying the candle -
-
-pickup match
-- you are now carrying the match -
-
-light match candle
-
-The candle is now lit. It illuminates everything in the room.
-
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
-</pre>
-
-<hr>
-
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
+Source: <a href="https://github.com/kaamava/Mono-depth-Estimation-on-Develop-Board"><i class="large github icon "></i>Monocular Depth Estimation on Ascend Development Board</a>
