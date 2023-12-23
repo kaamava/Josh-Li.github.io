@@ -13,49 +13,25 @@ labels:
 summary: "> Developed a Chinese text encoding method based on BiLSTM and embedded it into the encoding layer. > Constructed innovatively an encoder comprising four components: a fine-tuned BERT-Embedding layer, a BiLSTM layer, a series of convolutional gates, and a self-attention mechanism layer. > Collected corpora independently from various medical-related Chinese publications and pre-trained the preprocessed data using BERT to enhance semantic representations in sentences. > Achieved automatic summarization for medical texts, significantly reducing the time cost of reading and material collection."
 ---
 
-<img class="img-fluid" src="../img/cotton/cotton-header.png">
 
-Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
 
-To give you a flavor of the game, here is an excerpt from one run:
+## Introduction
+Due to the unique nature of the COVID-19 pandemic, text data related to it has exhibited explosive growth in scale within a short period. This data is characterized by its diversity and significant variations. To comprehensively study this textual information and better understand the virus's development trends and mutation directions, automatic summarization techniques play a crucial role. In this project, a fine-tuned BERT model is applied to generate medical text summaries based on publicly available literature data. The model framework consists mainly of encoder, decoder, and training modules. The core components for abstract generation include an encoder and decoder structure with BERT Embedding and BiLSTM, along with a multi-layer neural network connecting different modules to enable multi-task learning. Various attention mechanisms are also employed in the model.
 
-<hr>
+## Model
+BERT is a language model capable of unsupervised pre-training using a large amount of text data, forming the foundation of this summarization generation model. BERT features a bidirectional Transformer encoding layer, allowing for the pre-training of deep bidirectional representations of unlabeled data through a conditioned pre-processing procedure. This enables a better capture of bidirectional relationships within input sentences.
 
-<pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
+The summarization generation model structure proposed in this report consists of two core modules: an encoder and a decoder.
 
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
+![image](https://github.com/kaamava/BERT-Text-Summarization-COVID/assets/106901273/953c4138-e094-42c8-b517-306876622a8d)
 
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
+The structural details of the encoder and decoder are presented in BERT-COVID-text.pdf.
 
-pickup candle
-- you are now carrying the candle -
 
-pickup match
-- you are now carrying the match -
+## Dataset and Pre-processing
+The dataset used in this report is primarily obtained by retrieving keywords related to COVID-19 from published literature data, including journals such as "Chinese Medical Journal," "Journal of Southern Medical University," and "Journal of Peking University. Medical Edition." The report collects abstracts and titles from these publications and performs data preprocessing to clean the collected data. Subsequently, the Chinese text is reorganized into word sequences using the Jieba word segmentation library for in-depth analysis. During the data preprocessing, entries with title lengths outside the range [10, 70] and corresponding abstract lengths outside the range [200, 1100] are removed. Additionally, information irrelevant to the summarization task, such as literature authors and publication sources, is filtered out.
 
-light match candle
-
-The candle is now lit. It illuminates everything in the room.
-
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
-</pre>
 
 <hr>
 
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
+Github: <a href="https://github.com/kaamava/BERT-Text-Summarization-COVID"><i class="large github icon"></i>COVID-19 Medical Text Summarization</a>
