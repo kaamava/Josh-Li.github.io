@@ -10,7 +10,7 @@
     "location": { "address": "Soochow University", "postalCode": "215031", "city": "Soochow", "countryCode": "China", "region": "Jiangsu" },
     "profiles": [
       { "network": "github", "username": "Josh Li", "url": "http://github.com/kaamava" },
-      { "network": "linkedin", "username": "Josh Li", "url": "http://linkedin.com/in/changeme" },
+      { "network": "linkedin", "username": "Josh Li", "url": "https://www.linkedin.com/in/%E5%BD%A6%E6%BE%8D-%E6%9D%8E-aa08282a6/" },
       { "network": "twitter", "username": "kama", "url": "https://twitter.com/kamaKun0312" }
     ]
   },
