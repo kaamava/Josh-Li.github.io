@@ -12,49 +12,43 @@ labels:
 summary: "A competition that explores optimization objectives and methods for AI algorithms. In this competition, our aim was to train a machine learning model based on the runtime data provided to you in the training dataset and further predict the runtime of graphs and configurations in the test dataset. We used a Graph Convolutional Network (GCN) model to address this challenge. We also useadopted GCN convolution layers (GCNConv) to process the graph structure, facilitating the flow and integration of information between nodes. To further enhance the accuracy of predictions, we decided to employ model fusion on the aforementioned model. Our work achieved prediction and optimization of the operation of artificial intelligence models and algorithms. I received a Silver medal(4%) for this competition."
 ---
 
-<img class="img-fluid" src="../img/cotton/cotton-header.png">
+# kaggle-Google-AI-Comp
+### Goal of the Competition
 
-Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+Alice is an AI model developer, but some of the models her team developed run very slow. She recently discovered compiler's configurations that change the way the compiler compiles and optimizes the models, and hence make the models run faster (or slower)! 
 
-To give you a flavor of the game, here is an excerpt from one run:
+Train a machine learning model based on the runtime data provided to you in the training dataset and further predict the runtime of graphs and configurations in the test dataset.
 
+### Context
+An AI model can be represented as a graph, where a node is a tensor operation (e.g. matrix multiplication, convolution, etc), and an edge represents a tensor. A compilation configuration controls how the compiler transforms the graph for a specific optimization pass. In particular, Alice can control two types of configurations/optimizations:
+
+·A layout configuration control how tensors in the graph are laid out in the physical memory, by specifying the dimension order of each input and output of an operation node.
+
+·A tile configuration controls the tile size of each fused subgraph.
+![image](https://github.com/kaamava/kaggle-Google-AI-Comp/assets/106901273/a857a8b7-5f01-486d-b7a7-7522957c0b00)
+![image](https://github.com/kaamava/kaggle-Google-AI-Comp/assets/106901273/a84c79da-e9c1-4f95-86af-de7426cd070f)
+
+
+### Project Introduction
+We used GCN and Simple MLP in our project.
+
+1.Download official data to the input folder.
+
+2.Run five files sequentially: tile.ipynb, layout_default.ipynb, layout_random.ipynb, nlp_default.ipynb, nlp_random.ipynb.
+
+3.Execute combine.ipynb to obtain submission.csv.
+
+Note:Significant memory is required for execution; it is recommended to have 128GB RAM and 40GB GPU memory
+
+### Our Advantages
+1.This competition is based on the structure and operational time data of various deep learning models to accurately infer the consumption time of each node in the models, thereby optimizing and adjusting the model structure. The competition includes five regression prediction problems. To evaluate the accuracy of the predictions, the competition adopts two evaluation metrics: topK accuracy and correlation coefficient. 
+
+2.Considering the type of data in this competition, we chose to use a Graph Convolutional Network (GCN) model to address this challenge. Initially, we perform embedding encoding on the operation codes (node_opcode) and node configuration features (node_config_feat) to capture the latent representations of these discrete attributes. These encodings, combined with other node features (node_feat), serve as inputs to the nodes in the GCN model. In terms of model architecture, we use GCN convolution layers (GCNConv) to process the graph structure, facilitating the flow and integration of information between nodes. For the training objective of the model, we utilize the ListMLE loss function, a common choice in list-wise learning, suitable for addressing sorting or priority-related problems. Finally, we opt to train the model using the Adam optimizer. 
+
+3.The performance of a single model is often limited by its structure and parameters. To further enhance the accuracy of predictions, we decided to employ model fusion on the aforementioned model. Specifically, we combined the prediction results of multiple models through weighted fusion, then sorted and output these results. This strategy effectively reduces the model's bias and enhances its robustness. 
+
+4.In the competition, we made full use of the allotted time, managing the competition's pace effectively; we engaged in active discussions, devised a reasonable model iteration plan for the competition, and organized brainstorming sessions to advance the competition's progress. Meanwhile, everyone embarked on the model development work, ensuring to enhance the prediction accuracy as much as possible. 
+![image](https://github.com/kaamava/kaggle-Google-AI-Comp/assets/106901273/68c418b1-75a6-4309-938a-93b97e37ce3e)
 <hr>
 
-<pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
-
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
-
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
-
-pickup candle
-- you are now carrying the candle -
-
-pickup match
-- you are now carrying the match -
-
-light match candle
-
-The candle is now lit. It illuminates everything in the room.
-
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
-</pre>
-
-<hr>
-
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
+Github: <a href="https://github.com/kaamava/kaggle-Google-AI-Comp"><i class="large github icon "></i>Kaggle-AI Model Prediction</a>
