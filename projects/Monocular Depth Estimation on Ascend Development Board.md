@@ -58,4 +58,4 @@ We can perform real-time monocular visual depth detection using the Atlas 200DK 
 ![image](https://github.com/kaamava/Mono-depth-Estimation-on-Develop-Board/assets/106901273/bebe6fb4-0edd-4def-a438-0aa94a2a6c9f)
 <hr>
 
-Source: <a href="https://github.com/kaamava/Mono-depth-Estimation-on-Develop-Board"><i class="large github icon "></i>Monocular Depth Estimation on Ascend Development Board</a>
+Github: <a href="https://github.com/kaamava/Mono-depth-Estimation-on-Develop-Board"><i class="large github icon "></i>Monocular Depth Estimation on Ascend Development Board</a>
