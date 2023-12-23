@@ -14,50 +14,61 @@ labels:
   - GitHub
 summary: "> Studied the temporal misalignment of PLMs empirically at the lexical level, revealing that the tokens/words with salient lexical semantic change contribute much more to the misalignment problem than other tokens/words. > Proposed a temporal reasoning video-language pre-training framework with both video and language understanding and generation capabilities. > Introduced temporal reasoning pre-training tasks to generate temporal reasoning multi-modal representation through modeling fine-grained temporal moment information and capturing the temporal contextual relations between moment and event."
 ---
+## Improving Temporal Generalization of Pre-trained Language Models with Lexical Semantic Change
 
-<img class="img-fluid" src="../img/cotton/cotton-header.png">
+This repository contains part of the code and pre-trained models for our paper "Awareness of Time: Video-Language Models Embedding with Temporal Reasoning", which has been submitted to LREC-COLING2024. The complete code will be released after the conference announces the acceptance results.
 
-Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+## Contents
+- Abstract
+- Overview
+- Datasets
+- Baseline
+- Train
+- Results
 
-To give you a flavor of the game, here is an excerpt from one run:
+## Abstract
+Video-language pre-training has significantly improved the performance of diverse downstream tasks related to video and language. However, existing approaches often directly adapt image-language pre-training paradigms to video-language tasks, neglecting the unique temporal characteristics of videos. In this paper, we present a novel temporal-aware video-language pre-training framework. It introduces two innovative pre-training tasks to enhance temporal-awareness in multi-modal representations, incorporating fine-grained temporal moment information and temporal contextual relations between video-text pairs. Firstly, we propose a cross-modal moment exploration task, leveraging paired texts to uncover detailed video moment representations. Subsequently, using the acquired moment representations, we capture inherent temporal contextual relations by aligning video-text pairs across different time resolutions in a multi-modal temporal relation exploration task. Additionally, we introduce a shuffling test to assess the temporal reliance of datasets and the efficacy of video-language pre-training. This framework aims to fully exploit the temporal dimension in video data for more effective pre-training and improved downstream task performance.
+
+## Overview
+
+·We show that existing video-language models have difficulty in associating time order in video and language through controlled experiments on synthetic data and several evaluations on real datasets.
+
+·We propose a temporal reasoning video-language pre-training framework with both videolanguage understanding and generation capabilities.
+
+·We introduce temporal reasoning pre-training tasks to generate temporal reasoning multi-modal representation through modeling fine-grained temporal moment information and capturing the temporal contextual relations between moment and event.
+
+
+## Datasets
+
+we pre-train our model on a webly-sourced video dataset WebVid-2M with 2.5M video-text pairs and a image-text dataset Google Conceptual Captions (CC3M) with 3M image-text pairs. Unlike previous methods, we do not pre-train our model on the large-scale video-text datasets like HowTo100M with 136M video-text pairs and YT-Temporal-180M due to the heavy computation.
+
+![tempo-data-v1](https://github.com/kaamava/Research-and-Application-of-Temporal-Reasoning/assets/106901273/1bff9281-7ea3-4896-aadf-72dbfa49d396)
+
+
+We evaluate our pre-trained model on several video-language benchmarks including video-text retrieval, video question answering, and video captioning tasks. Specifically, video question answering (VideoQA) can be categorized as Multiple-Choice (MC) and Open-Ended (OE) settings. The evaluation datasets are briefly summarized in below. 
+
+• Video-Text Retrieval: MSRVTT, ActivityNet Caption and SSv2-Template;
+
+• VideoQA (MC): TGIF-Action, TGIF-Transition, MSRVTT-MC and NExT-QA;
+
+• VideoQA (OE): MSRVTT-QA,MSVD-QA and ActivityNet-QA;
+
+• Video Captioning: MSRVTT.
+## Baseline
+
+
+| **Post-pretraining Dataset** 	|                        	|   **Hyperparameters**   	|         	| **Download link** 	|
+|------------------------------	|:----------------------:	|:-----------------------:	|:-------:	|:-----------------:	|
+|                              	| $\alpha_{\text{same}}$ 	| $\alpha_{\text{cross}}$ 	| $\beta$ 	|                   	|
+| TEMPO-TL                     	|           1.0          	|           1.0           	|   1.0   	|        [Link](https://isis-data.science.uva.nl/testoftime/checkpoints/tempo-hparams_1.0_1.0_1.0-epoch=27-step=8288.ckpt)       	|
+| ActivityNet                  	|           1.0          	|           1.0           	|   0.0   	|        [Link](https://isis-data.science.uva.nl/testoftime/checkpoints/activitynet-hparams_1.0_1.0_0.0-epoch%3D9-step%3D7450.ckpt)       	|
+| Charades                     	|           1.0          	|           1.0           	|   0.0   	|        [Link](https://isis-data.science.uva.nl/testoftime/checkpoints/charades-hparams_1.0_1.0_0.0-epoch%3D3-step%3D3120.ckpt)       	|
+| Charades-Ego                 	|           1.0          	|           1.0           	|   1.0   	|        [Link](https://isis-data.science.uva.nl/testoftime/checkpoints/charadesego-hparams_1.0_1.0_1.0-epoch%3D2-step%3D3639.ckpt)       	|
+
+## Train
+## Result
+*These two parts will be released after the conference announces the acceptance results.*
 
 <hr>
 
-<pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
-
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
-
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
-
-pickup candle
-- you are now carrying the candle -
-
-pickup match
-- you are now carrying the match -
-
-light match candle
-
-The candle is now lit. It illuminates everything in the room.
-
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
-</pre>
-
-<hr>
-
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
+Github: <a href="https://github.com/kaamava/Research-and-Application-of-Temporal-Reasoning"><i class="large github icon "></i>Research and Application of Temporal Reasoning</a>
