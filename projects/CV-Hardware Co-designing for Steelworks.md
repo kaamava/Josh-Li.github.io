@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/CV.png
+image: img/CV.PNG
 title: "CV-Hardware Co-designing for Steelworks"
 date: 2023/09-Present
 published: true
