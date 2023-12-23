@@ -14,49 +14,16 @@ labels:
 summary: "> Processed and labeled the acquired data, and applied machine learning and natural language processing technologies to conduct data analysis, obtaining results of practical significance for solving social problems and making effective suggestions. > Collected online public opinion data on COVID-19 on the Sina Weibo platform in the first half of 2022, processed and annotated the data according to the requirements of the BERT model, and fine-tuned the BERT model using the data. > Completed the task of public opinion analysis effectively through adding new modules to the model to improve accuracy."
 ---
 
-<img class="img-fluid" src="../img/cotton/cotton-header.png">
+# BERT-Weibo-SA
+The code for *BERT for sentiment analysis in the era of epidemic*. It was developed to leverage machine learning and data science for analyzing sentiments during the first half of 2022. This project was conducted under the guidance of Professor Luu Anh Tuan at NTU, where I undertook courses and a summer project from July 2022 to September 2022.
+![云图_副本](https://github.com/kaamava/BERT-Weibo-SA/assets/106901273/704259df-892f-4a1c-b597-1b24d2f21eed)
 
-Cotton is a horror-style text-based adventure game I developed using the functions and macros built from The Wizard's Game in [Conrad Barski's Land of Lisp](http://landoflisp.com/). Slightly more interesting and convoluted! (It is not that scary.)
+## BERT for Sentiment Analysis in the Era of Epidemic
+Yanshu Li. BERT for sentiment analysis in the era of epidemic. ACE (2023) Vol. 6: 1217-1226. DOI: 10.54254/2755-2721/6/20230611.(https://ace.ewapublishing.org/article.html?pk=fc3c14545f5f4845af31c28d9e76079f) 
 
-To give you a flavor of the game, here is an excerpt from one run:
+**Abstract**: With the continuous progress of Internet technology, the network platform has gradually entered everyone's life, providing a platform for ordinary people to express their ideas. Since the occurrence of COVID-19, monitoring and analyzing public opinion on the Internet platform has become more practical. Through timely monitoring and analysis, it is of great practical significance for the relevant departments to analyze and control sentiment information and stabilize and guide public sentiment. Therefore, it is essential and of practical significance to select a suitable model for classifying and analyzing public opinion on the Internet platform. This paper reviews the development of word vector technology from the perspective of technology development and then lead to the more advanced Bidirectional Encoder Representations from Transformers (BERT) model with great significance. On this basis, this paper fine-tunes the pre-trained Bert model. It applies the transfer learning strategy to analyzing the public sentiment of the occurrence of COVID-19 during the recent epidemic in Shanghai based on Sina Weibo data. In addition, tests are conducted to compare the model with the previous models. The experimental results show that the Bert model has significant advantages over the traditional model in character vector encoding and feature extraction.
 
+**Keywords**: BERT, Sentiment analysis, Transformer, Epidemic
 <hr>
 
-<pre>
-You open your eyes, and you are greeted by an unfamiliar ceiling.
-Startled, you get to your feet and quickly scan your surroundings. It's
-dark except for the stream of light coming from a crack on the only boarded
-window in the room. You try to peek through the crack, but you cannot see
-anything. You wonder where you are and who could have possibly brought you here.
-
-<--------------------help------------------------>
-Enter quit or one of the following commands -
-Weld light look walk pickup inventory help h ?
-<------------------------------------------------>
-
-look
-The room is a picture of decay with only a faded number identifying it as room-4. The bed you were
- lying on is stained with what looks like dried blood. Could it be your blood? No - it is not. The
- only way out of the room aside from the door to the corridor is a window that is boarded shut. It
- looks like it has been like that for decades. There is a door going west from here. You see a candle
- on the floor. You see a match on the floor.
-
-pickup candle
-- you are now carrying the candle -
-
-pickup match
-- you are now carrying the match -
-
-light match candle
-
-The candle is now lit. It illuminates everything in the room.
-
-walk west
-The corridor is lit with the candle. It is so long that you cannot see to the end. You notice that
- there are words written on the wall. There is a door going east from here. There is a way going north
- from here. There is a door going south from here.
-</pre>
-
-<hr>
-
-Source: <a href="https://github.com/jogarces/ics-313-text-game"><i class="large github icon "></i>jogarces/ics-313-text-game</a>
+Github: <a href="https://github.com/kaamava/BERT-Weibo-SA"><i class="large github icon "></i>Deep Learning for NLP and Data Science</a>
