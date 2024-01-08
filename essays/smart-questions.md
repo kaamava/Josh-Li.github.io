@@ -1,9 +1,9 @@
 ---
 layout: essay
 type: essay
-title: "[IJCAI2024] A LDA Model Augmented with BERT for Aspect Level Sentiment Analysis"
+title: "[IJCAI2024] An LDA Model Augmented with BERT for Aspect Level Sentiment Analysis"
 # All dates must be YYYY-MM-DD format!
-date: 2023--06-28
+date: 2024-01-06
 published: true
 labels:
   - Paper
